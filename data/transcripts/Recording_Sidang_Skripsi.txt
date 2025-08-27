@@ -1,0 +1,453 @@
+Oh iya iya Oke Di abstract Di sini kan dijelaskan datanya itu pakai data set IMS di ring set ketiga ya?
+
+Iya betul Oke, tapi ada 4 data di dalamnya gitu ya?
+
+Di ring 1, 2, 3, 4 gitu Iya betul, itu variable-nya Variable-nya ada 4 Di ring 1, 2, 3, 4 Oke, kemudian disini dijelaskan satu-satu hasilnya dari AI, PAI, dan GAN gitu ya.
+
+Terus di kalimat terakhirnya itu, di kalimat temuan ini menegaskan kepekaan rekonstruksi murni AI sebagai alat peringatan dini, sementara pendekatan probabilistik PAI dan GAN menawarkan generasi lebih kuat, tetapi dengan konsekuensi berkurangnya kecepatan deteksi awal.
+
+ini melihatnya dari mana ini?
+
+Kecepatan deteksi awal maksudnya bagaimana?
+
+Oh, jadi kecepatan deteksi awal itu maksudnya adalah yang tadi saya jelaskan di evaluasi hasil anomaly detection yang mana di bapak 4 yaitu kalau tadi LCM Ganyu kan pertama kali mereteksi anomali itu di data point ke 1263 Sementara kalau yang Ae sama Fae, kalau yang Ae itu dia pertama kali berdeteksi anomali, itu digagak oleh ke 1134 Tapi kalau yang Fae itu 1136 Jadi Ae sama Fae ini tidak berbeda jauh, tapi yang berbeda sangat jauh itu adalah yang si Higan Jadi maksudnya berkurangnya kecepatan deteksi awal itu adalah deteksi yang kita sambungkan atau deteksi yang berkaitan dengan early warning karena deteksi ini anomali, seperti itu Oke, berarti kecepatan deteksi awalnya maksudnya titik menemukannya tadi itu?
+
+Iya, betul.
+
+Titik pertama kali si model menemukan anomali di data point pertama Oke, mungkin bisa dijelaskan yang FFT-nya aja Disini kan datanya ada 4 ya Variable-nya Terus menjadi tertransformasi itu gimana?
+
+Berarti X yang di persamaan 2.1 halaman 18 X-nya itu X-1, terus-2, 3, 4 gitu ya Coba ke halaman 18 Berarti itu adalah, X ini adalah nilai di biring 1, 2, 3, 4 gitu maksudnya Iya, jadi X yang dimasuk di situ adalah X yang row-nya Yang mana tiap row-nya itu kan memiliki data nilai untuk biring 1, biring 2, biring 3, biring 4 Nah, X tersebutlah yaitu value-value yang dimasukkan ke dalam promis FFT yang tersebut Terus XN itu diisi apa XN?
+
+XN, nah untuk yang XN ini dia di isinya dengan data point, jadi seperti itu Misalkan X0 Yang mana itu berarti X0 Kan kalau dibuat tiga nya azal itu X0 itu berarti yang 4 Maret 2020 Ya salah ya Ya 4 Maret 2024 itu X0 berarti X nolnya ini adalah yang mana?
+
+nah berarti untuk X nolnya ini sendiri untuk X nolnya ini sendiri itu yang data set yang timestamp yang pertama yang pertama tuh, tension yang pertama kali, pertama kali ribu sendiri yang mana itu?
+
+0,06 aja atau semua ke kanan itu?
+
+nah itu jadi satu-satu 0,06 itu ditransformasi, dikonversi terus yang 0,07 dikonversi, sampai yang dari keempat oke, terus dikalikan E itu ya eksponen, J nya ini diisi apa?
+
+Nah untuk J, untuk J-nya itu, J-nya itu I.
+
+Apa yang ada keterangannya?
+
+Iya, sepertinya saya uang tuliskan keterangan dulu, untuk J-nya.
+
+Eh, dua P, P ada nilainya K, K itu nanti diisi dengan apa?
+
+Untuk K-nya itu diisinya dengan itu, yang mana K adalah 0,1 sampai N-1, yang mana itu adalah urutan datanya.
+
+Atau urutan dia data keberapa, atau pada data set yang saya itu, dia true keberapa, dia yang mau ditransformasi Berarti kalau saya mau yang data 4 Maret 2024, 9, 2, 7, 4, 6 itu berarti K nya adalah 0 gitu?
+
+Iya betul lho, seperti itu Oke K nya 0, N kecilnya 0, dibagi N besar, N besarnya berarti apa?
+
+Untuk yang besarnya ini, dia seharusnya atau seingat saya total keseluruhannya?
+
+Berarti 6.324 itu dikurangi satu, eh nggak ya, 6.324 itu, N besarnya.
+
+Seharusnya seperti itu.
+
+Terobat nanti kalau ditampilkan tuh perhitungannya sama enggak ya, sampai nanti diberikan perhitungannya gitu ya Terus yang menjadikannya ini, kan itu ada diskret sama ini fast flow ya, apa bedanya berarti, GFT sama FFT ini Jadi kalau misalkan, kalau FFT ini kan adalah algoritma yang diberikan untuk menghitung transformasi Fourier diskret Nah, kalau yang dibedanya dengan FFT ini, dia algoritmanya membuat perfeksi sinyal dari domain waktu ke domain frekuensinya itu Itu lebih cepat dibandingkan metode BFT Di sini ada tulisannya, sehingga spectrum frekuensi sinyal dapat diperoleh dalam waktu yang singkat Jadi perbedaannya hanya di masalah waktu atau time computation Nah disini kan sudah ditransform terus dilanjutkan lagi dengan min-max scalar ya Kenapa enggak salah satu aja?
+
+Boleh enggak misal FFT aja atau langsung min-max action?
+
+Kenapa harus dua tahap itu?
+
+Oh, sebenarnya kalau serta aku juga gak apa-apa, cuman saya ada tunjukan dari paper sebelumnya Dia itu melakukan deteksi anomali 3 di data bearing, cuman bearing yang set kedua Dia itu preparasinya adalah efekte sama minimax, sebenarnya kalau misalkan minimax luar gak apa-apa Gak apa-apa?
+
+Iya, malah gak apa-apa Tapi kenapa perlu dilakukan?
+
+Lebih ribet kan gitu Karena paper yang menjadi tunjukan saya melakukan dua-duanya apa alasannya?
+
+alasannya adalah karena kalau misalnya FFT yang seperti ini kan kalau dilihat tuh udah lurus semua terus di normasa sih jadi balik kayak bentuk aslinya laki gitu kan kalau tadi lihat secara visualnya sih nah sebenernya gini Bu, kalau FFT itu kan berdasarkan penjelasan itu kan pengen melihat kalau misalkan ada penyimakan kecil itu kan kelihatan ya dari sini karena berbeda banget dengan yang sebelumnya Nah, kalau minima scalar, alasannya adalah apa?
+
+Biar skala pada seluruh datanya itu sama semua.
+
+Jadi, apa tujuannya biar sama semua, itu pada saat nanti model di-training, itu dapat men-stabilikan pelatihan.
+
+Jadi, stabilitas pelatihannya itu lebih stabil pada saat dilakukan model training.
+
+Jadi, sebenarnya alasannya adalah men-stabilikan data untuk apa?
+
+Biar membantu modelnya dalam stabilitas pelatihan.
+
+Oke, sudah dijelaskan alasannya ditambahkan normalisasinya tadi?
+
+Yang dilaparannya.
+
+Sudah.
+
+Di bab?
+
+Di bab, ini di halaman 21.
+
+Oh bab 2?
+
+Iya, betul.
+
+Oke, berarti alasannya supaya tadi skalanya sama gitu ya, ditambahkan min-max.
+
+Oke, mungkin bisa dijelaskan kan datanya yang tadi kan ribuan ya, dari TXT kemudian diubah menjadi CSV.
+
+Iya betul.
+
+Gimana itu, ada mungkin datanya.
+
+Oh, jadi sebentar saya coba.
+
+Jadi sebenarnya itu kan di VS Code gitu.
+
+Atau data yang kamu dapatkan pasti di folder gitu DTXT nya tuh gimana tertulis Seperti ibu, jadi awalnya DTXT seperti ini Lalu kalau kita klik, misalkan untuk yang timestamp pertama Nah, dia totalnya ada 4 fitur, dari 1 sampai dari 4, yang mana total seluruh datanya ini adalah 20.490, yang sudah saya diselesaikan di bank 4.
+
+Oke, timestamp 1 ya?
+
+Iya, itu untuk timestamp 1, betul.
+
+Coba yang di timestamp 2, panjangnya berarti beda lagi?
+
+Oh, panjangnya sama semua.
+
+Panjangnya sama terus?
+
+Iya, betul.
+
+Oke.
+
+Sama semua.
+
+Oke, terus ini kamu ekspor atau diubah ke CSV gitu ya, terus yang dimaksudkan di rata-rata absolu tadi itu yang mana?
+
+Oh, yang di rata absolu itu adalah yang setiap ini, misalkan ini untuk yang kancen pertama mungkin, kancen pertama, jadi rata-rata absolu itu untuk setiap fitur.
+
+Ke bawah ini berarti?
+
+Iya ke bawah, betul.
+
+Dirata-retakan sampai bering 4 dan jadilah seperti yang di rata-retakan.
+
+Oh sampai bering 4, nggak per bering gitu?
+
+Iya, maksud saya per bering, namun maksudnya itu dirata-retakan itu bering 1 dirata-retakan di bawah, bering 2 juga sampai bering 4.
+
+Sehingga menjadi setiap timestamp hanya ada satu data.
+
+Itu kamu ulangi sampai semua timestamp tadi?
+
+Sampai semua timestamp, betul.
+
+Terus yang divisualisasikan ini berarti yang hasil rata-ratanya gitu?
+
+Iya betul.
+
+Jadi yang divisualisasikan itu yang hasil rata-rata dan itulah yang dipakai untuk analisis, yang di-datable.
+
+Berarti setelah di rata-rata, terus di transform tadi FFT, terus di min-max gitu ya?
+
+Iya, sebelum di min-max.
+
+Terus tadi kan ada statement, oh iya, coba ke halaman 57 di bab 3, itu kan tahap modeling pendekatan hyperparameter tuning menggunakan metode hyperband Hyperband tuh gimana?
+
+Di bab 2 apakah ada?
+
+Saya pada saat itu sebenarnya udah kepikiran ngisi hyperband umat, saya belum lakukan sih tapi ga ada step ini?
+
+ga ada menggunakan metode hyperband?
+
+oh, hyperband nya saya pake di codingan cuman belum saya tulis di 2 nya ga ada jadi apa?
+
+metode hyperband itu seperti apa?
+
+jadi, bentar ini ada segitu lagi ga ada papan lagi oh, ada disitu papan oh, ada disitu tunjukkan nano nya aja ya, apa step nya atau apa itu?
+
+Oh kutbulah boleh ya atau referensinya boleh kamu ngapain aja deh pertengung Hai nah jadi Hai ntar jadi atau saya pakai ini Seperti ini harusnya kalau di bawah dua itu masuk kemana, hyperparameter tuh nih stepnya Seharusnya iya Bu Jadi hyperband itu yang di sini Nah di sini itu nah disini itu, dia kan ada max epox nya 100 gue ya nah cuman misalkan saya mengambil skenario biar menghitungnya gampang jadi menghitungnya gampang ini bukan gini misalkan max epox nya saya tentukan misalkan 81 disini ada variable atau yang namanya faktor ya Faktor di objek hyperband nya itu adalah 3.
+
+Nah jadi hyperband itu step by step nya adalah dia itu melakukan berparameter plumbing untuk setiap istilahnya itu batch.
+
+Jadi misalkan seperti ini.
+
+Untuk yang batch pertama, untuk yang batch pertama ini dia bakalan mencoba 81 model.
+
+itu bermaksudnya kombinasi hyperparameter sampai 21 cuman dia datang satu kali epok dia dalam satu kali epok nah terus setelah itu setelah itu dia selanjutnya bakalan mencoba 27 Cuma disini dia dalam tiga tali Epoch Nah, jadi maksudnya gimana dari 81 ke 27 Jadi dari 81 kombinasi percobaan model yang dalam satu Epoch itu Jadi tiap model itu hanya dicoba secara Epoch Nah, dipilih 27 model yang terbaik dari 81 Nanti setelah dipilih 27 model yang terbaik 27 model itu dilatih sebanyak 3 epoch setiap model, lalu lanjut lagi ke 39 model, sampai menghasilkan satu model yang terbaik.
+
+Nanti ditambahkan ya hasilnya Dan mungkin kalau ada step yang kamu masukkan disini Sesuaikan dengan data itu ya enggak apa-apa sih di BUB3 nya Mungkin biar lebih jelas Nah disini kan di BUB3 itu ada pernyataan Kalau Phi itu hyperparameter nya sama dengan I gitu ya?
+
+Iya betul Kenapa?
+
+Dibuat sama Oh itu yang BUB3 ya?
+
+Yang ketiga saya buat sama karena memang biar adil aja gitu Karena memang yang di duni itu hanya neuron sama yang lain-lainnya itu Karena kan perbedaannya AI sama FI itu kalau AI itu kan dia merekonstruksi data dari input terus yaudah gak ada pendekatan probabilistik Kalau FI itu ada pendekatan probabilistik jadi bedanya itu luang Tapi sebenarnya dalam perlakihan parameternya itu dalam hyperparameternya itu sebenarnya sama aja Jadi biar seimbang di sini yang saya buat sekarang ini.
+
+Terus, oh ya mungkin saran berarti di judul caption-nya ditambahkan aja.
+
+Berarti haber parameter untuk AI dan VAI.
+
+Caption-nya kan kamu hanya AI.
+
+Terus di halaman 61, di kalimat awal atas sendiri, Sekaligus mempertahankan dinamika adversarial yang sehat antara generator dan diskriminator Maksudnya yang sehat disini itu?
+
+Itu yang mana?
+
+Yang atas sendiri, baris kedua, halaman 61 Oh maksudnya, maksudnya yang sehat itu yang baik gitu loh Jadi mempertahankan dinamika adversarial itu kan pokoknya generator sama diskriminator Istilahnya kayak saling perang gitu kan sampai menghasilkan generator yang terbaik, generator yang terbaik.
+
+Jadi yang sehat itu maksudnya yang bagus itu, yang benar-benar proper.
+
+Oke, mungkin nanti kalimatnya disesuaikan aja ya, maksudnya apa.
+
+Ya, sehat di sini.
+
+Oke, ke halaman 64.
+
+Di situ ada anomali threshold ya, dihitung ya ini berarti.
+
+Bagaimana?
+
+Yang Anomaly Threshold Calculation Sudah ketemu Nah disitu ada yang mana threshold yang dipilih adalah nilai maksimum dari bar paling kanan yang berdekatan secara kontinu tanpa jeda atau patahan Kenapa milihnya bar paling kanan dan seperti itu Nah itu sebenarnya ada di paper referensi Jadi kalau di paper referensi itu yang ini Sebentar Itu yang ini Nah, jadi ini tuh merupakan hasil penelitian dari si Sulayman Dia di sini menghasilkan result anomali itu sebesar 0,126 Yang mana itu 0,126?
+
+Nah, 0,126 ini kalau dilihat dari sini, itu adalah berada di sini Yang mana di sini itu adalah merupakan bar yang paling kanan dari sepatu, dari histogram ini Nah, dia seharusnya kan bisa-bisa aja ngambil yang disini Karena kan distribusinya masih sampai disini kan Cuman penelitian ini itu ngambilnya di yang berpalingan 6,126 Karena biar tidak terlalu outlier Karena kalau yang disini kan ngambilnya terlalu outlier banget gitu Jadi nanti kalau terlalu outlier banget, takutnya modelnya itu dalam mendeteksi anomali secara dini itu kurang proper Jadi oleh karena itu di penelitian ini mengambilnya yang di sini.
+
+0,126 itu berarti apakah nilai yang sudah di FFT kan tadi di transform dan di min-max scalar?
+
+Nah 0,126 itu adalah hasil recursion error, hasil recursion error nya.
+
+Jadi setelah memodelkan, terus hasil prediksi data dikurangi dengan hasil input awal Soalnya kalau histogram, itu kan kita bisa menentukan binnya atau kotaknya Nah tergantung kita kalau banyak, eh kita mau tentukan kotaknya banyak atau sedikit Gimana kita justifikasinya, itu kotak yang terakhir itu kan tergantung dari kita menentukan seberapa banyak bin yang mau kita buat jadi apakah mungkin ada ukuran tertentu misal kayak di boxplot di boxplot itu kan misal ada berapa kali IKR atau seperti apa itu dikatakan supplier misalnya nah apakah mungkin ada justifikasi lain bar nya ini seperti apa seberapa banyak bin yang dibuat itu kan juga mempengaruhi nanti karena Instagram kan tergantung dari bin yang mau kita buat juga Nah sebenarnya saya memang kenapa kok menentukan thresholdnya pakai metode seperti ini Jadi sebenarnya saya di codingan itu sudah mencoba 3 metode thresholdnya Jadi yang pertama itu adalah saya menggunakan K dikali standard deviasi dari data reconciliation errorsnya Nah itu ternyata di awal-awal itu kalau banyaknya anomali Padahal harusnya tidak anomali gitu, jadi sangat-sangat tidak make sense Terus metode yang kedua, dari paper juga sama, itu metodenya adalah karena yang awalnya tadi K x standard deviation aja, ini ditambahin MEAN tambah K x standard deviation Yang mana kalau dari saya setika itu sebutannya adalah Trisigma Itu saya juga sudah coba, namun masih di tengah-tengah itu masih banyak yang anomali juga Dan misal saya coba ini, ini yang merupakan paling make sense dari hasilnya.
+
+Kenapa nggak pakai 6 sigma?
+
+6 sigma berarti 6 standard deviasi.
+
+Oh itu saya belum coba sih, karena memang referensi paper saya itu kebanyakan selalu kanya itu 3.
+
+Sebenarnya 3, kalau 2 itu biasanya dari 1,96.
+
+coba aja nanti dicari sebenernya tiga standar deviasi itu berarti berapa tingkat kepercayaannya kan kamu udah belajar seperti normal itu loh kalau 95% berarti kan 1,96 ya kan 5% dan kanan kiri berarti kan itu kalau biasanya didekatinnya memang 2 sigma nah kalau 3 sigma itu berarti berapa berarti artinya lebih lebar lagi ke kanan ya berarti 2 koma atau 3 koma 6, berarti itu sebenarnya, biasanya kalau di industri saya ingat saya, kalau stigma itu berarti 0 defect, jadi nggak ada defect, itu sangat kecil, ya mungkin tadi itu, jadi ke outlier-nya, mungkin bisa dikurangin lagi ke 5 stigma, misal, soalnya, nah apa justifikasi bar yang terakhir itu, ini apakah bar-nya itu ber-default-nya atau kamu tentukan BIM yang dibentuk, gimana, Azal?
+
+Kalau saya, sebentar.
+
+Jadi saya tentukan NBIC-nya 20 Kenapa kok 20?
+
+NBIC-nya 20 itu sebenarnya saya juga tidak ingin sih Cuma meskipun saya tentukan NBIC-nya 20 Cuma yang dihasilkan juga NBIC-nya juga enggak 20 Berapa itu berarti?
+
+Jadi dari sini Yang lainnya saat kecil itu Iya makanya Nah, sebenarnya kan English yang paling kanan itu yang ini Jadi maksud saya tadi tidak ada patahan Patahan itu berarti kan dia menandakan sebenarnya garis Garis yang sama kayak tadi di PPT itu Itu sebenarnya kan kalau kamu belajar histogram itu kan kelas kan Kelas interval, masuk kelas interval berapa gitu kan Nah itu nanti harus menunjukkan, kenapa jasifrasinya 20 atau seperti apa membentuk binnya itu Karena itu kan nanti sebagai patokan, bukan thresholdnya Kalau diperkecil berarti kan bisa jadi lebih ke kiri atau seperti apa Oke, terus Nah kalau dari gambar, itu kok yang orange tiba-tiba tidak ada itu apakah ketutupan dengan warna yang lain ya?
+
+Yang biring kedua, yang di gambar 4.6 Atau ada informasi yang belum saya baca Di halaman 70, itu kan warnanya yang ada, sisa biru, hijau, hitam Jadi memang data hasil transformasinya, saya cek lagi, itu sama Berarti yang oranye sama dengan apa?
+
+ini Bu, disini nah ini kalau saya cuma klik berarti hitam ya bearing 4 sama dengan yang hitam bearing 2 sama dengan si bearing 4 nah itu sepertinya belum dimasukkan ke sini ya di narasinya sudah dijelaskan belum?
+
+Maksudnya kan enggak ada.
+
+Yang dijelaskan hanya di piring satu, dia tuh paling di atas gitu kan indenya, paling stagel.
+
+Ngarit ditambahkan ya, karena kok enggak ada yang orange, sama dengan warna yang mana gitu.
+
+Baik ya.
+
+Oke.
+
+Terus ke halaman 74, di bagian atasnya tabel 4.2.
+
+Nah, disitu kan ada statement nilai latent dimension yang cukup besar membantu model menangkap pola kompleks dalam data Sedangkan learning rate yang moderat memastikan model tidak terjebak pada lokal minimum dan cepat konvergen Yang disini learning rate yang moderat itu yang sebesar berapa Jadi kalau learning rate yang moderat itu, ini kan saya mencoba skenario-nya kan 0,01 tadi ada yang 0,01 terus ada yang 0,005 maksudnya moderate itu yang tidak terlalu kecil dan juga tidak terlalu besar gitu yang mana itu maksudnya di tengah-tengah gitu moderate di tengah-tengah berarti yang mana 0,005 tadi?
+
+0,0 Oh kalau kecil kan berarti yang 0,001 itu ya kecil?
+
+0,001 itu dia paling besar ya?
+
+Yang paling besar apa yang kecil?
+
+0,001 itu besar-besar paling besar Ya paling besar Terus 0,005 itu dia yang paling kecil ya terus yang 0,0001 dia yang paling tengah-tengah bener, tengah-tengahnya 0,0001 nah ini berarti tengah-tengahnya tergantung kita dong kalau saya settingnya 0,01 0,05 0,1 berarti yang moderatnya beda lagi ini bukan secara umum iya karena secara umum gimana menentukan modelnya terus terjebak pada lokal minimum maksudnya, gimana lokal minimum disini tuh?
+
+maksudnya lokal, jadi kan kalo misalkan apa namanya, bentar, saya lupa, oh ini, apa namanya, optimizer nah optimizer itu kan adalah Adam dan lain-lainnya nah kan karena model dilatih, karena ada optimizer nya itu berarti ada lokal minimum dan juga global minimum maksudnya tidak terlibat di lokal minimum itu artinya model lu tidak hanya Maksudnya, ngetrain-nya itu tidak di lokal minimum beruang Apa yang terjadi kalau di lokal minimum beruang?
+
+Maka modelnya hanya menghasilkan itu-itu aja Modelnya tidak meng-improve, artinya errornya tidak menurun Dan terjebak di itu-itu aja Berarti harapannya dia jadi global minimum gitu?
+
+Dia harapannya lebih ke..
+
+ya pokoknya hasilnya itu modelnya itu mengalami penurunan errornya bener-bener proper, bener-bener menurun, tidak pada suatu saat itu dia apa ya, loss sama pallidation loss nya itu, si error nya itu tidak stabil doang, tapi dia bener-bener menurun ini kan sebenernya di istilah, kayaknya jika kulus ya total minimum, ini optimasi kan oke, jadi harapannya dia itu bener-bener yang paling minimum secara seluruhan di semua nilai iya betul Oke Kemudian terus, ini yang di bagian visualisasi yang Car Donat Kenapa kamu pakai donat?
+
+Pai car juga ya?
+
+Bukan pai, donat bukan Kan ada yang gak ada tengahnya, ada yang ada tengahnya Kenapa pakai yang itu?
+
+Karena cuma melihat 2 desi data dari 2 proporsi kan ada yang gak ada tengahnya oh maksudnya yang gitu ya sudah itu baik, terima kasih oke, terima kasih selanjutnya silahkan terima kasih karena beberapa pertanyaan saya sudah ditadak jadi silahkan dengan presisi Bu Indah nanti ke Bu Indah hahaha udah usah kesayang gak saya ulang lagi pertanyaannya eee oke eee sebelum saya membahas ini sebenarnya saya lebih suka membaca laporan kamu terdapatnya melihat presentasi kamu sejujurnya aku terlalu kecil Oke, nanti beberapa minor revisi nanti silahkan baca yang sudah saya tandai di sini.
+
+Nanti ketika bimbingan revisi, kalau dinyatakan lulus oleh Pak Ajis nanti silahkan ini dibawa ketika saya.
+
+Oke, secara keseluruhan, bab 1 sudah sangat baik, sudah jelas apa tujuannya, kemudian organisinya apa di PPT, jadi tadi juga sudah ada.
+
+Kemudian tadi sudah dibahas juga oleh Bu Indah pertanyaan tentang FFT, kemudian Minmak Skyler juga sudah dibahas tadi.
+
+Nah, untuk LSTM saya rasa tidak masalah karena kamu sebenarnya kan hanya membandingkan LSTM AE, VAE, dan segala-galanya gitu.
+
+Kemudian kamu menambah sedikit kontribusi baru di anomaly detection, ya kan ya.
+
+Saya mau dijelaskan dong tentang anomaly detection.
+
+Sebenarnya apa sih yang dikatakan anomaly di sini, normal itu seperti apa, anomal itu seperti apa, dan prosesnya kamu untuk mendapatkan anomali dari data kamu ya jadi sebenarnya kalau dari anomali detection itu sendiri bagaimana kita bisa mereteksi apa ya, kayak penjimpangan suatu data, maksudnya penjimpangan suatu data itu ketika kita sudah tahu suatu threshold anomali maka ketika ada data point yang di atas threshold anomali maka disitulah terjadi anomali detection artinya ada anomali Oke, saya tolong dulu.
+
+Berarti dari awal kamu sudah mengetahui kalau ada anomali di data kamu?
+
+Ya, jadi seperti ini Bu.
+
+Jadi pada dataset EMS Bearing ini, yang di set 3, itu memang pada dokumentasi dataset EMS Bearing, yang mana nih dokumentasinya ada di NASA dan juga ada perhatiannya juga, itu bilang bahwa memang di akhir-akhir.
+
+Jadi kan data set image bearing ini merupakan data set yang dilakukan eksperimen test to failure Artinya, si bearing itu dijalankan eksperimennya sampai menuju tahap dia mengalami kegagalan, failure Memang di dokumentasinya, sama penelitian-penelitian yang saya baca, di akhir-akhir pengujian itu memang si data set EMS Bearing ini ada kendala faulty yaitu kendala anomali pada si data set EMS Bearing ini Jadi kita mengetahui bahwa suatu data set EMS Bearing ini anomali atau faulty itu dari dokumentasinya itu sendiri Jadi sebenarnya sudah tahu ya kalau ada kategori termasuk faulty atau failure di data tersebut Betul, tapi tidak diketahui label ground root nya Oh oke, jadi tujuan kamu untuk mendeteksi anomali setelah selesai proses LSTM adalah?
+
+Selesai proses LSTM adalah saya dapat benar-benar mengetahui di data yang mana suatu sinyal ini atau suatu sinyal itu benar-benar mengalami anomali di timestamp keberapa, suatu data musim ini yang C3 ini benar-benar mengalami kegagalan secara penuh, gitu, seperti itu Oke, untuk skenario anomalinya, karena disini kan ditabatil suatu data IMS1 itu kan ada timestamp, bering 1, bering 2, bering 3, bering 4 berarti yang kamu jadikan patokan adalah timestampnya, atau bering 1, 2, 3, 4?
+
+Maksudnya patokan bagaimana?
+
+Yang melandasi kamu, oh ini tuh anomali, faulty atau failure Oh iya, jadi emang yang saya jadikan patokan adalah si time time-nya Karena kan nilai data pada setiap beding itu, itu nilai sinyalnya Apakah sinyal yang mengalami kenaikan di time-time segini?
+
+Nah jadi seperti itu patokannya Oh iya, sebelum saya balik ke anomalization Tabel 3.1 itu kan ini sebenarnya hasil konversi kamu enggak sih?
+
+Iya.
+
+Datang mentahnya enggak ada?
+
+Datang mentahnya yang teksin.
+
+Iya udah, tapi yang teksin aja dulu untuk yang tabel 3.1.
+
+Karena kalau 3.1 ini salah persis dengan gambar 4.2.
+
+Jadi kamu masukkan saja misalnya potongan teksin itu, ini data mentahnya.
+
+Kemudian bentuk setelah di rekonstruksi atau dikonsersi itu seperti ini Oke, kemudian lanjut bentuk anomalinya kamu apa-apa setelah kamu mengetahui dari itu ada faulty, normal, atau failurenya Kemudian dengan metode apa approach-nya anomalinya itu bisa dijelaskan Untuk operasinya sendiri, ini maksudnya adalah untuk menentukan model terbaik dalam melakukan deteksi anomali atau bagaimana?
+
+Ya, jadi untuk melakukan deteksi anomali pada perhentian saya itu adalah dilakukan berdasarkan evaluasi early warning atau deteksi secara diri yang mana di sini evaluasinya adalah di sini itu yang LSTM-IU LSTM-IU dia berhasil mereteksi anomali pertama kali pada data point ke 1134 dengan threshold sebesar 0,25an nah data point 1134 ini kita selisihkan dengan thresholdnya Lalu, untuk yang LSTM point juga sama, dia pertama kali mendeteksi data point ke, eh, dia pertama kali mendeteksi anomali di data point ke 1136, dan yang terakhir dibentuk di 1293.
+
+Nah, dalam hal ini, saya melihatnya adalah evaluasinya berdasarkan early warning.
+
+Early warning itu, pokoknya bagaimana si mobil mendeteksi anomali secara gigi.
+
+Nah disini evaluasi yang terbaik itu adalah berdasarkan yang si LSTMI Karena dibandingkan ke dua model lainnya, itu LSTMI berhasil meroteksi amali lebih gini daripada yang di dua model lainnya Seperti itu untuk Jadi target kamu adalah early warningnya itu Iya betul early warningnya Karena apa, jadi sebenarnya pada paper paper yang sudah saya baca itu bisa kita meminimalkan fase positif Tapi hanya untuk data yang berlihat dulu Kebetulan disini tidak ada lagi gonggur, jadi tidak bisa Oleh karena itu evaluasinya berdasarkan lagi gonggur Kemudian nanti itu penjelasannya antara normal dengan anomali faulty failure itu nanti kamu tambahkan ya?
+
+Ketika kamu membahas anomali protection Karena belum ada Tapi ada bahasa normal anomali itu yang tadi sudah dibahas keindah ya, di gambar 16 dan seterusnya Karena kita harus membedakan dulu normal itu bagaimana, kemudian anomali itu bagaimana Beberapa citasi itu masih salah, jadi nanti coba pastikan bagaimana citasi yang benar itu seharusnya kalau ada di dalam teks Karena ada ketidak konsistenan, contohnya nih, ZANG DKK DOR, kemudian dalam tahun, tahunnya baru dikasih kurung, kemudian ada yang lain itu, LI DKK 2023 itu di dalam kurung, nanti coba dipastikan lihat petunjuk yang benar itu seperti apa.
+
+Selain itu Kalau dia tadi, oh tadi Bu Indah belum sempat nyinggung ya Yang tempat penelitian Nah tempat penelitian ini kamu korjian dirumah?
+
+Iya, saya dirumah Tapi untuk buku skripsi kayaknya di jadi lab ini, lab TSD, atau dikerjakan di STMM karena kalau rumah sangat riset sekali, karena kan kamu LSTM ya bisa sih dirumahkan ya dengan laptop masing-masing, cuma kan gimana ya?
+
+nanti diganti saja, supaya lebih formal melakukan penelitian Kemudian di gambar 3.1 flowchartnya kan ada kamu kasih gambar untuk data processing dan anomaly detection itu ada subprosesnya, kalau itu notasinya kan ya.
+
+Kemudian yang subprosesnya itu, yang gambar 3.2 kan maksudnya?
+
+Subprosesnya di situ, itu subproses dari data preprocessing Berarti nanti kamu mention ya di 3.32 itu kalau gambar 3.2 itu adalah subproses dari 3.1 Gambar 3.2, data preprocessing ini kan merupakan subproses dari ini kan ya Nah nanti jangan lupa kamu mention dulu Karena kan enggak boleh miss kan ya?
+
+Kita kan harus menjelaskan kalau data preprocessing itu subprosesnya adalah yang gambar 3.2, begitu juga dengan anomaly detection.
+
+Nah ibu panggil.
+
+Oke.
+
+Saya mau proses dulu untuk jumlah data setiap file, data set, biring set ketiganya itu memang sama ya?
+
+Apa setelah di preprocess?
+
+Apa data collection langsung halaman 67?
+
+Halaman 67.
+
+4.1 data collection.
+
+kan txt nya total filenya 6,3,2,4 setiap file berisi 24,80 data getaran untuk setiap biring berarti memang sama bingin 1,2,3,4 nya jadi 1,2,3,4 itu memang saya pakai ini aja jadi misalkan untuk timestamp yang pertama ya timestamp yang pertama itu memang total data atau total row Untuk setiap variable, itu Rp20.000 semua, begitu juga dengan plan step yang lainnya.
+
+Itu memang dari datasetnya ya?
+
+Iya, dari datasetnya pada saat saya download di komponisar.
+
+Sekarang ada range waktu ya?
+
+Iya, betul.
+
+Oke, terima kasih Ibu Yutika.
+
+Selanjutnya silahkan Bumar Yama.
+
+Oke, jadi kan tadi sebenernya ada ini ya, ada simpulannya menurut saya yang enggak terluki, yaitu LHCMA itu saya enggak lupa, itu bilangnya memberikan peringatan paling tinggi.
+
+Iya, Pak.
+
+Nah, ini yang LHCMA, Pak.
+
+LHCMA itu.
+
+Nah, maksudnya peringatan tinggi itu kan belum tentu itu benar-benar.
+
+Masa, jadi early warning pasti benar-benar kan enggak juga terlalu tinggi.
+
+Jadi memang early warning terlalu tinggi, apakah pada data point yang dideteksi LSCMI disitu memang sudah terjadi anomali, kan enggak.
+
+Kan bisa saja di data point setelahnya, karena memang early warning itu ya jaga-jaga dulu, karena bisa saja di data point setelahnya anomalinya.
+
+Nah tapi maksudnya kalau terlalu early warning itu juga gak bagus Betul, iya Maksudnya kan kata-kata ini tuh bisa lebih dulu gitu loh Kan kamu bilangnya karena memberikan peringatan ke paling ini Jadi kayak paling dingin nih tapi dipastikan itu tepat gitu Jadi kayak intinya lengkapnya benar kan Misalnya tadi kamu timestamp, misalkan timestamp 100 Terus dia 99 atau ini ada lengkap-lengkap itu sudah benar itu benar, tapi kalau pertanyaannya, pertanyaannya 100, tapi dari 50, dari 20, kan salah?
+
+Iya betul.
+
+Jadi maksudnya, biar gak terkesan bahwa early warning yang dimaksud itu benar-benar.
+
+Benar gitu.
+
+Tadi sebenarnya sudah dibahas banyak ya, sama Bu Ika, sama Bu Ida.
+
+Kalau saya beberapa penulisan tadi lomong saya menemukan beberapa, tinggal di-check saja.
+
+Silahkan, terima kasih banyak mas.
+
+Oke, terima kasih Bu Mariama.
+
+Oke, dari saya ini aja mungkin yang pertama untuk tinjauan bustaka yang tabelnya itu kasih nomor ya.
+
+Nah tabel IP, mas.
+
+Jadi biar gampang kalau mau menunjukkan kamu pakai bagaimana, pakai yang mana.
+
+Ya oke terus, ya ini yang halaman 64, coba dilihat, yang paling bawah paragraf terakhir, itu kan kamu bilang berdasarkan visualisasi simulatif pada gambar 3.8 pada model pertama diketahui bahwa titik pertama kali terjadinya anomali ditandai dengan lonjakan nilai reconstruction error yang melewati batas threshold, garis putus-putus berwarna hijau.
+
+Terus, dia kan yang merah.
+
+Aduh, ketinggalan.
+
+Ya, makanya saya tadi baca kelewatan ya.
+
+Oke, terus di halaman selanjutnya itu, kamu bilang apabila suatu model mendeteksi mendeteksi anomali pertama kali pada data point ke-100 dengan threshold 20 padahal 20 nya ini kan tadi ya pakai histogram gitu ya itu mungkin perlu kamu refer gitu ke mana kamu dapat 20 nya itu maksudnya cara menghitungnya aja kamu refer aja oh berarti saya tuliskan 20 ini berdasarkan?
+
+ya misal dengan perhitungan ini 20 ini kamu hitung beneran ya?
+
+Enggak, saya random aja Enggak, maksudnya kamu jelaskan berdasarkan misalnya persamaan 2 titik berapa gitu Menghasilkan suatu threshold yang contohnya misal disini 20 Nah itu baru kamu jelaskan gitu Oke, terus sama yang ini ya juga Kamu menghitungnya dari data point ke 79 dan threshold ke 15 Itu kamu kurangi gitu kan ya Itu kamu dapatnya dari mana?
+
+Itu kamu refer juga.
+
+Oh, mendapatnya dari mana itu maksudnya?
+
+Maksudnya perhitungannya.
+
+Di persamaan berapa itu kamu perlu menjaga.
+
+Soalnya kan itu core-nya yang kamu kerjakan.
+
+Nah, ini kan sesuai dengan penelitian sebelumnya kan sebenarnya.
+
+Iya.
+
+Itu 9 minus 15, terus 100 minus 20, ini apa-apa.
+
+Iya, itu paper-nya yang ini juga?
+
+Ya, ada kan, kalau misalnya di bab 2 belum kamu tulis, tema pada yang hitungnya kayak gitu, berarti kamu penulis Berarti itu untuk menentukan apa yang ini?
+
+Yang paling bagus kan ya, kan kamu bilang deviasinya lebih kecil gitu kan Sebenarnya kok bisa kamu, itu masa nyebutnya deviasi sih?
+
+kan 79 itu datapoint ke 79 iya, datapoint 9 time-time ke 79 tapi kan terus resultnya kan 15 sama 20 ini kan ya kan masa deviasi melitung kayak gitu lah bukan selisih dong selisih ya?
+
+bukan lah ya enggak tahu kamu tanya minda, tanya minda enggak maksudnya kalau deviasi itu kan biasanya nilainya segini segini, terus ada yang sampai segini, ada yang sampai segini, itu deviasi, standar deviasinya.
+
+Ini kan kayaknya, harusnya istilahnya bukan deviasi maksud saya.
+
+Deviasi biasanya, deviasi itu jarak sih, jarak nilai.
+
+Tapi kan 79 sama 15 ini kan bukan nilai yang sama maksudnya.
+
+Oh iya, tanpa perbandingan yang ini.
+
+Oke, dari saya itu aja.
+
+Mungkin itu aja Azal ya, boleh keluar dulu kita akan berdiskusi untuk menentukannya lagi ya.

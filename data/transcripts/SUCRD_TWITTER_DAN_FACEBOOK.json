@@ -1,0 +1,475 @@
+{
+  "language": "id",
+  "text": "Intro Gue udah berhenti main Twitter, udah gak pernah lagi megang Twitter, udah 2 minggu kali Lama loh itu Untuk orang yang dulunya aktif di Twitter, followers sampe 16 juta ya 15 juta itu keluarga bokap ya  sebagai orang yang dulunya tuh aktif banget twitteran gue mau ngapain aja twitteran gitu sekarang gue ngeliat twitter isinya kebencian orang berantem, cepet banget orang berantem sampai ada orang berantem soal politik ketemu gebuk-gebukan, denger gak beritanya? itu parah banget ini ya, bahkan ketika gue yang cinta damai ini mencari ketenangan timeline gue lagi rame nih berantem soal apa gue gak ngerti lah terus gue pengen mengadamkan mengademkan. Gua bikin polling. Gua lagi pengen makan nih, lagi pengen makan siang. Gua bilang, eh guys, gua mau polling nih, makan siang. Mana yang lebih enak ya? Batagor, somay. Kan bisa polling di Twitter tuh. Gua bikin gitu aja, orang ribut. Somay aja bang, somay. Terus ada yang bilang, Batagor aja bang, somay kan dari Cina. Ini apa sih? Sama makanan aja rasis. Batagor itu lambang persatuan, bakso tahu gorek, apaan sih?  sakit deh orang-orang di Twitter tuh sakit banget gak jelas, gue tinggalin udah gue main Facebook sempet tapi Facebook lebih goblok lagi orang-orangnya isinya kalau gak bapak-bapak tukeran jokes garing di Facebook itu ibu-ibu OOTD kondangan suka kan ada foto-foto ibu-ibu tuh biasanya gini, pake kebaya baris sama temen-temennya Kakinya satu di depan, tangannya disini buat pamerin cincin, kekondangan bareng jalannya gini kayaknya. Kalau enggak bapak-bapak, ibu-ibu, anak kecil goblok di Facebook. Facebook menunjukkan betapa bobloknya moral bangsa kita. Ketika gue melihat satu update-an Facebook dimana foto dua anak SD di sebuah kamar hotel, di kamar hotel, megang selimut begini dan captionnya, aku tidak akan lupakan malam ini. Ada liat ga fotonya? Udah gila kali ya. Gua jaman SD nyari cerai di Comberan men. Ini dia ngapain di kamar hotel berdua, pake selimut, terus begini gitu. Pertanyaan-pertanyaan muncul dari kepala gua. Pertama, kok bisa dia nyewa kamar hotel? Kan di hotel itu kan harus pake KTP. Dia dateng apa? Ini katu perpus saya. Apa coba? Yang bayar juga siapa? Gue jaman SD, gue dulu uang jajan gue cuman cukup buat beli lidi pedes. Udah gitu. Ini siapa yang bayarin kamar hotel apa? Jangan-jangan ibunya lagi. Ibunya dateng, nah ini hadiah, kamu juara satu ya silahkan bersenang-senang. Gila kali ya orangnya.",
+  "chunks": [
+    {
+      "timestamp": [
+        0.0,
+        4.0
+      ],
+      "text": " Intro"
+    },
+    {
+      "timestamp": [
+        4.0,
+        8.0
+      ],
+      "text": " Gue udah berhenti main Twitter, udah gak pernah lagi megang Twitter, udah 2 minggu kali"
+    },
+    {
+      "timestamp": [
+        12.0,
+        14.0
+      ],
+      "text": " Lama loh itu"
+    },
+    {
+      "timestamp": [
+        14.0,
+        18.0
+      ],
+      "text": " Untuk orang yang dulunya aktif di Twitter, followers sampe 16 juta ya"
+    },
+    {
+      "timestamp": [
+        23.0,
+        25.0
+      ],
+      "text": " 15 juta itu keluarga bokap ya"
+    },
+    {
+      "timestamp": [
+        27.0,
+        25.0
+      ],
+      "text": ""
+    },
+    {
+      "timestamp": [
+        27.86,
+        29.52
+      ],
+      "text": " sebagai orang yang dulunya tuh aktif banget twitteran"
+    },
+    {
+      "timestamp": [
+        29.52,
+        30.82
+      ],
+      "text": " gue mau ngapain aja twitteran gitu"
+    },
+    {
+      "timestamp": [
+        30.82,
+        32.96
+      ],
+      "text": " sekarang gue ngeliat twitter isinya kebencian"
+    },
+    {
+      "timestamp": [
+        32.96,
+        36.08
+      ],
+      "text": " orang berantem, cepet banget orang berantem"
+    },
+    {
+      "timestamp": [
+        36.08,
+        38.06
+      ],
+      "text": " sampai ada orang berantem soal politik"
+    },
+    {
+      "timestamp": [
+        38.06,
+        40.04
+      ],
+      "text": " ketemu gebuk-gebukan, denger gak beritanya?"
+    },
+    {
+      "timestamp": [
+        41.04,
+        41.78
+      ],
+      "text": " itu parah banget"
+    },
+    {
+      "timestamp": [
+        41.78,
+        43.78
+      ],
+      "text": " ini ya, bahkan ketika gue"
+    },
+    {
+      "timestamp": [
+        43.78,
+        45.2
+      ],
+      "text": " yang cinta damai ini"
+    },
+    {
+      "timestamp": [
+        45.2,
+        47.54
+      ],
+      "text": " mencari ketenangan"
+    },
+    {
+      "timestamp": [
+        47.54,
+        49.18
+      ],
+      "text": " timeline gue lagi rame nih"
+    },
+    {
+      "timestamp": [
+        49.18,
+        50.7
+      ],
+      "text": " berantem soal apa gue gak ngerti lah"
+    },
+    {
+      "timestamp": [
+        50.7,
+        53.22
+      ],
+      "text": " terus gue pengen mengadamkan"
+    },
+    {
+      "timestamp": [
+        53.22,
+        55.1
+      ],
+      "text": " mengademkan. Gua bikin polling."
+    },
+    {
+      "timestamp": [
+        55.6,
+        57.14
+      ],
+      "text": " Gua lagi pengen makan nih,"
+    },
+    {
+      "timestamp": [
+        57.22,
+        58.96
+      ],
+      "text": " lagi pengen makan siang. Gua bilang, eh"
+    },
+    {
+      "timestamp": [
+        58.96,
+        61.16
+      ],
+      "text": " guys, gua mau polling nih, makan siang."
+    },
+    {
+      "timestamp": [
+        61.42,
+        63.12
+      ],
+      "text": " Mana yang lebih enak ya? Batagor,"
+    },
+    {
+      "timestamp": [
+        63.34,
+        64.82
+      ],
+      "text": " somay. Kan bisa polling di Twitter tuh."
+    },
+    {
+      "timestamp": [
+        65.08,
+        67.38
+      ],
+      "text": " Gua bikin gitu aja, orang ribut."
+    },
+    {
+      "timestamp": [
+        68.88,
+        71.38
+      ],
+      "text": " Somay aja bang, somay. Terus ada yang bilang, Batagor aja bang,"
+    },
+    {
+      "timestamp": [
+        71.44,
+        73.0
+      ],
+      "text": " somay kan dari Cina. Ini apa sih?"
+    },
+    {
+      "timestamp": [
+        74.56,
+        75.42
+      ],
+      "text": " Sama makanan"
+    },
+    {
+      "timestamp": [
+        75.42,
+        76.32
+      ],
+      "text": " aja rasis."
+    },
+    {
+      "timestamp": [
+        77.82,
+        79.5
+      ],
+      "text": " Batagor itu lambang persatuan,"
+    },
+    {
+      "timestamp": [
+        79.8,
+        81.38
+      ],
+      "text": " bakso tahu gorek, apaan sih?"
+    },
+    {
+      "timestamp": [
+        83.1,
+        81.38
+      ],
+      "text": ""
+    },
+    {
+      "timestamp": [
+        84.84,
+        86.34
+      ],
+      "text": " sakit deh orang-orang di Twitter tuh sakit banget"
+    },
+    {
+      "timestamp": [
+        86.34,
+        88.68
+      ],
+      "text": " gak jelas, gue tinggalin udah"
+    },
+    {
+      "timestamp": [
+        88.68,
+        90.48
+      ],
+      "text": " gue main Facebook sempet"
+    },
+    {
+      "timestamp": [
+        90.48,
+        92.12
+      ],
+      "text": " tapi"
+    },
+    {
+      "timestamp": [
+        92.12,
+        95.02
+      ],
+      "text": " Facebook lebih goblok lagi orang-orangnya"
+    },
+    {
+      "timestamp": [
+        95.02,
+        96.62
+      ],
+      "text": " isinya"
+    },
+    {
+      "timestamp": [
+        96.62,
+        99.2
+      ],
+      "text": " kalau gak bapak-bapak tukeran jokes garing"
+    },
+    {
+      "timestamp": [
+        99.2,
+        104.9
+      ],
+      "text": " di Facebook itu ibu-ibu OOTD"
+    },
+    {
+      "timestamp": [
+        104.9,
+        105.58
+      ],
+      "text": " kondangan"
+    },
+    {
+      "timestamp": [
+        105.58,
+        108.2
+      ],
+      "text": " suka kan ada foto-foto ibu-ibu tuh"
+    },
+    {
+      "timestamp": [
+        108.2,
+        109.78
+      ],
+      "text": " biasanya gini, pake kebaya"
+    },
+    {
+      "timestamp": [
+        109.78,
+        111.32
+      ],
+      "text": " baris sama temen-temennya"
+    },
+    {
+      "timestamp": [
+        111.32,
+        118.32
+      ],
+      "text": " Kakinya satu di depan, tangannya disini buat pamerin cincin, kekondangan bareng jalannya gini kayaknya."
+    },
+    {
+      "timestamp": [
+        121.32,
+        126.32
+      ],
+      "text": " Kalau enggak bapak-bapak, ibu-ibu, anak kecil goblok di Facebook."
+    },
+    {
+      "timestamp": [
+        127.32,
+        131.32
+      ],
+      "text": " Facebook menunjukkan betapa bobloknya moral bangsa kita."
+    },
+    {
+      "timestamp": [
+        131.32,
+        137.32
+      ],
+      "text": " Ketika gue melihat satu update-an Facebook dimana foto dua anak SD di sebuah kamar hotel,"
+    },
+    {
+      "timestamp": [
+        137.32,
+        140.32
+      ],
+      "text": " di kamar hotel, megang selimut begini dan captionnya,"
+    },
+    {
+      "timestamp": [
+        140.32,
+        142.32
+      ],
+      "text": " aku tidak akan lupakan malam ini."
+    },
+    {
+      "timestamp": [
+        142.32,
+        144.32
+      ],
+      "text": " Ada liat ga fotonya?"
+    },
+    {
+      "timestamp": [
+        144.32,
+        146.32
+      ],
+      "text": " Udah gila kali ya."
+    },
+    {
+      "timestamp": [
+        146.32,
+        149.32
+      ],
+      "text": " Gua jaman SD nyari cerai di Comberan men."
+    },
+    {
+      "timestamp": [
+        149.32,
+        152.32
+      ],
+      "text": " Ini dia ngapain di kamar hotel berdua,"
+    },
+    {
+      "timestamp": [
+        152.32,
+        154.32
+      ],
+      "text": " pake selimut, terus begini gitu."
+    },
+    {
+      "timestamp": [
+        154.32,
+        157.32
+      ],
+      "text": " Pertanyaan-pertanyaan muncul dari kepala gua."
+    },
+    {
+      "timestamp": [
+        157.32,
+        160.32
+      ],
+      "text": " Pertama, kok bisa dia nyewa kamar hotel?"
+    },
+    {
+      "timestamp": [
+        160.32,
+        162.32
+      ],
+      "text": " Kan di hotel itu kan harus pake KTP."
+    },
+    {
+      "timestamp": [
+        162.32,
+        165.32
+      ],
+      "text": " Dia dateng apa? Ini katu perpus saya."
+    },
+    {
+      "timestamp": [
+        165.32,
+        167.32
+      ],
+      "text": " Apa coba?"
+    },
+    {
+      "timestamp": [
+        167.32,
+        169.32
+      ],
+      "text": " Yang bayar juga siapa?"
+    },
+    {
+      "timestamp": [
+        169.32,
+        173.32
+      ],
+      "text": " Gue jaman SD, gue dulu uang jajan gue cuman cukup buat beli lidi pedes."
+    },
+    {
+      "timestamp": [
+        173.32,
+        175.32
+      ],
+      "text": " Udah gitu."
+    },
+    {
+      "timestamp": [
+        175.32,
+        177.32
+      ],
+      "text": " Ini siapa yang bayarin kamar hotel apa? Jangan-jangan ibunya lagi."
+    },
+    {
+      "timestamp": [
+        177.32,
+        181.32
+      ],
+      "text": " Ibunya dateng, nah ini hadiah, kamu juara satu ya silahkan bersenang-senang."
+    },
+    {
+      "timestamp": [
+        183.32,
+        185.32
+      ],
+      "text": " Gila kali ya orangnya."
+    }
+  ]
+}

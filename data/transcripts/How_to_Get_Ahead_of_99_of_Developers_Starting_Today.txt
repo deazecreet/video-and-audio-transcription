@@ -1,0 +1,261 @@
+Yo.
+
+I've been coding for something like seven or eight years now, but for the first four of that journey, I barely made any progress.
+
+Finally, after all that time, just a month ago, I built and launched my first commercial SaaS product in beta after three months of building the MVP.
+
+Learning to code and applying those skills to building your own app or landing a job is difficult, but I've put together 20 pieces of advice that I wish I heard when I first started.
+
+These are going to be more focused on building apps just because that's what I'm interested in right now, but if you are just wanting to land your first software engineering job, this will be helpful as well.
+
+Number one, your idea doesn't matter.
+
+I've wanted to build my own iOS apps, games, and a SaaS product for years, but I was always bogged down in trying to find the perfect idea.
+
+I thought that if I didn't come up with a unique concept that's never been attempted before, it wasn't worth building.
+
+I think that's completely wrong and would actually encourage my younger self to build something that has been done before because it proves somebody cares enough about the solution.
+
+Your idea itself is worthless, I'm sorry.
+
+The execution is what matters.
+
+Number two, for the love of God, start now.
+
+One of the things I'm most angered with myself about is how long it took me to finally start taking action.
+
+I've been learning on and off how to code for years, but it's really been in the last four since I started my computer science degree and really the last year and a half that I've actually coded consistently on real projects.
+
+When I was in high school, I would watch a few videos or code a super small to-do app once every few weeks, run into a roadblock, and then not code again for another few weeks until I felt some sort of motivation.
+
+If you've been thinking for any amount of time that you want to start coding or do it more, the moment you're done watching this video, of course, go and code something and continue doing that every single day.
+
+Number three, no zero days.
+
+If you're just starting to learn to code, every day that you're not coding will be detrimental to you retaining the knowledge you're learning from tutorials or practice building projects.
+
+By far, the number one habit I've gotten into is coding pretty much every single day, of course outside of my day job, even if it was just for 30 minutes.
+
+If you're working on a large app, a small amount of time like that doesn't feel like enough to make any progress, so it's very easy to say, you know what, I'll take off today and get back to it tomorrow.
+
+But this is how you end up getting into a cycle of missing days and losing momentum.
+
+Number four is know your goal.
+
+This for me has really helped me to show up when I just don't feel like it.
+
+There's literally hundreds if not thousands of different things you can do with this skill of programming, be that working as an engineer, doing freelance work, building websites for businesses, making your own commercial apps, creating games, the list goes on.
+
+If you want to make a game, unless you're a cracked developer or enjoy putting yourself through pain, you'll need to learn a game engine like Godot, Unity, or Unreal Engine, and thus GDScript, C Sharp, C++, or Visual Scripting are among the things that you need to understand.
+
+If like me, you've been wanting to build your first SaaS, focusing on learning web technologies was the obvious path.
+
+Number five, your language does not matter.
+
+As developers, learning new languages and frameworks is a ton of fun, but it also makes the choice of which you want to learn using projects so much more overwhelming.
+
+The thing I need to remind myself of often is that your language or technology does not matter.
+
+They all have their strengths and weaknesses, of course, and are better for different purposes, but it doesn't matter if your backend API is in Go or TypeScript, just fucking choose a language and move on.
+
+If you're constantly learning different languages or jumping between one of the 17 different JavaScript frameworks, you're going to slow down your progress.
+
+Picking one tech stack that you like and can begin to understand really becomes a superpower.
+
+When I decided to start working on my app, CreatorKiwi, I chose Next.js for the front end because I had enjoyed using it building my personal site and blog, and then I chose Go for the backend because it was a language I had used in school, kind of liked, and heard good things about it in terms of performance and code simplicity.
+
+Now that I have a good amount of experience working with both these technologies, I'm a much faster developer with them.
+
+I understand how to use these tools, and any other project that I go to work on, this is what I'm going to use.
+
+Again, the actual technologies you're using doesn't really matter, but if you're interested in seeing all the different tools that have been helpful for me in building my first app, I'll leave a link to that list in the description.
+
+Number six, use tutorials sparingly.
+
+This was the biggest trap that I fell into for years, over-relying on tutorials.
+
+I was stuck in tutorial hell, which is where I would watch tons of videos about how to code, but if I ever tried to go and implement something for myself, I felt completely lost.
+
+Tutorials give you the sense of progress and make you feel like you're learning, but if you're not using them in the right way, the chances are that you'll retain very little of the info.
+
+For me, the most effective way I found of learning with tutorials is using a crash course video to understand syntax and the general patterns of a language, and then immediately get into applying that topic in my own project.
+
+I found over time that I much prefer this style of learning where if I do come across a roadblock, I can just search into Google, Ask AI, or find some specific YouTube video that guides me with that specific issue of having.
+
+If you're brand new to coding and haven't used other languages before, you will probably need to use more tutorials to understand more of the basic concepts, but what I urge you to do is do all of the exercises, even if they feel simple, that a course you're taking tells you to, and even better, create your own exercises like after every video you watch, finding some way to apply what you just learned without copying any solution.
+
+Number seven, avoid AI.
+
+I know this is probably a hot take but just being super real, if I were talking to my younger self trying to learn coding today, I would tell them to completely ignore AI.
+
+Right now you hear a lot of people talking about how you can use AI to ship an app in three days and make a million dollars but that makes it really easy to get into this mindset of chasing quick wins, but I still think that keeping a long-term approach with building is how you stay in this game.
+
+I'm sure someone's coined this term already, but AI hell is 100 times worse than tutorial hell.
+
+If you're using AI when you don't actually know how to code, it'll feel like magic and like you're making tons of progress.
+
+You can ask AI to fix or add anything, and for a while, it'll probably do a pretty good job.
+
+The problem is that as your code base is growing in complexity, it's going to have bugs and you won't understand how it works.
+
+And then the AI will end up creating more and more bugs and attempt to fix the old ones.
+
+Taking your time and learning the hard way is how you're going to pick up the essential concepts of the tech you're working with and later be able to guide AI and have it help you be more productive.
+
+When I was first learning Go, I realized that I relied way too much on AI for like a month or two and remembered very little of how the language actually worked.
+
+After that point, I've mostly stopped using AI for Go entirely, only asking it questions when I get stuck.
+
+If you're using an AI IDE like Cursor, I highly recommend for any code that you don't know how to write, use the ask mode instead of letting the agent write it.
+
+Once you understand what you're doing and are simply asking the agent to write it faster, you can review that code and be confident whether or not it's correct.
+
+Number eight, project-based learning is the best method.
+
+Now this is of course just my opinion, and if tutorials do work really well for you, that's awesome, but for me, I found that I much more enjoy working on a specific project and then supplementing it with tutorials, YouTube videos, Google searches, etc., so that when I'm running into problems, I can use those to help me with my project.
+
+I learned Unreal Engine and game development as a whole for the first time in my second last semester of college, where I had a class where it was set up that the entire semester we worked on a single game.
+
+We had a few lectures in the first couple of weeks that were the basics of Unreal, showing us how to use the editor, what blueprints were, and just enough that we could feel somewhat comfortable.
+
+Then, the rest of the semester, it was up to us to finish our game purely on our own, so I had to learn how to use blueprints, which technically isn't coding, but it's still using the same concepts of programming and calling functions, having loops, etc.
+
+After that class ended, I ended up working for the first few months of 2025 with my brother on our first game, and having that project to work on taught me a ton about game development with Unreal specifically.
+
+Unfortunately, I have put that game aside for the moment to focus on other projects, but the reason I mention that is I talked about for years wanting to learn game development, and in just a couple of months when working on a very specific project, I was able to learn a ton.
+
+Nine is focus on solving problems.
+
+This concept is thrown around a lot, and for the first few years I was learning to code, I thought it was BS.
+
+That belief honestly held me back more than I realized, but at the end of the day, the purpose of writing code is to build something that solves a problem.
+
+When you're looking for an idea for a project, the best way to find one is solve a problem that you've experienced or know that somebody else has.
+
+When I was trying to come up with ideas for SaaS products I could build, I had a Notion database full of ideas, but more importantly, they were focused around problems that I had encountered.
+
+When you're focused on problems like, I don't know which of my YouTube videos drives the most leads to my newsletter, or I find XYZ tool for doing some task really confusing, it becomes much easier to figure out what you could build to solve that pain point.
+
+Number 10 is create building blocks.
+
+What I mean by this is write your code in such a way that it's modular enough to act like a building block.
+
+You can import it into a completely different project and it's able to work just fine.
+
+Whenever you're building UI components or even writing backend authentication systems, when you're focused on making each of these systems a reusable building block, you write better code and save yourself a ton of time in the future when you want to reuse this functionality.
+
+If you're totally stumped on what to build, creating a template for yourself is a fantastic first project idea.
+
+This is actually what I built before I started working on CreatorKiwi, which is my link conversion tracking app for creators and founders.
+
+I had a Next.js and Go full stack app that had billing and authentication setup so that whenever I built a SaaS product, I didn't have to rewrite any of that boilerplate code.
+
+That saved me a ton of time when I decided that I wanted to work on CreatorKiwi so I could immediately get into writing business logic.
+
+Number 11 is have a proper project management workflow.
+
+For me, this means using linear to write down all of the features, improvements, and bugs that I want to work on.
+
+This is one place where I can go to see what is the highest priority thing to work on and also figure out how much progress I'm making over time.
+
+It doesn't need to be complicated.
+
+Notion or Trello can also work well.
+
+I think it's just about having a single place where you're documenting your work and thinking about how your projects will evolve.
+
+Number 12 is avoid scope creep.
+
+When you're working on a project, the number one thing that will slow you down and prevent you from shipping is adding on way too many features.
+
+If I was really clear on what I was trying to build with my startup I probably could have shipped in what took me three months about a month month and a half instead because I started the project wanting to basically create social media management tools on top of my main link conversion tracking functionality and then getting into CRM like features and a ton of other blow it just took me a lot more time from day one you should be super focused on what your MVP looks like which is the smallest and simplest version of the product that is still useful and can prove whether anyone cares.
+
+Number 13, actually ship something.
+
+In my eight years of coding, I've literally shipped twice, if you don't want to count like my portfolio websites.
+
+That was one shitty side project, frankly, and my SaaS.
+
+Now that I've actually worked on a real project and finished the MVP, I'm much more confident in my coding abilities and the fact that I can make things.
+
+Making the scope of your project smaller will help a ton with this.
+
+And honestly, if you're struggling to finish the projects you're working on, the best thing you can do is either significantly cut down on the scope or just choose a small project you can finish in a week.
+
+Make a game that you can publish on H.I.O.
+
+next Sunday or build an app and send me a DM on Twitter with your domain and I'll check it out.
+
+Number 14, give yourself deadlines.
+
+This one is huge.
+
+Having a specific day that you intend on finishing your project will work wonders for your productivity.
+
+I took a quick trip home last month and randomly decided that you know what I'm gonna launch my private beta next week and I did it.
+
+If I didn't give myself this frankly arbitrary date I'd probably find a way to still be working on my quote MVP today.
+
+15.
+
+Know when to cut your losses.
+
+I was just working on a new feature to build simple landing pages so that tracking email signups was easier but it got to be a lot harder than I realized.
+
+I spent like a week and a half on it and really started to feel unmotivated because it was super difficult and I wasn't shipping anything else in my app.
+
+I had to make the hard decision to put aside all of that work I just did for the moment and work on a quick one-day feature to give myself that quick win and get back to actually working on important things.
+
+I'm not saying to have 20 unfinished projects, but if you know what you're building is a waste of time or should be set aside, don't feel bad about doing it.
+
+16.
+
+Don't be a perfectionist.
+
+One of the things that really slowed me down in shipping my first app was trying to polish everything.
+
+I wanted the UI to look super clean and have tons of keyboard shortcuts and subtle animations.
+
+All that's cool, but it only slowed me down and prevented me from figuring out whether anybody cared about what I was building.
+
+17 is use version control.
+
+When you're working alone on a project, it might seem like a waste of time to use Git and work on different branches and have PRs, but when you're using a real version control workflow, it makes staying focused on one task at a time a lot easier.
+
+It also means that once you've launched, you can more easily jump between different work or revert your changes if you broke something.
+
+18.
+
+Make marketing a priority.
+
+This is mainly applicable if you're trying to build a commercial project, but this also applies in just showing off what you're working on to potential employers.
+
+Something I wish I had done earlier was thinking more about how will people actually figure out about what I'm working on.
+
+As developers, I think that the idea of promoting what we're working on is really in the back of our mind.
+
+The idea of build it and they will come is simply false.
+
+You do need to build a great product, but you still have to tell people that it exists.
+
+This could be by writing blog articles, making YouTube content, or cold emailing potential users.
+
+Just anything to generate awareness for your project.
+
+19.
+
+Keep track of the progress you're making.
+
+I found that being able to take a step back for a moment and think about what I've been able to build is a great way to stay motivated when working on my app.
+
+A more tactical way of doing this, which I honestly don't do enough, is keeping a work log where every day when you finish, you write down everything you got done.
+
+I think this is especially helpful if you're working on a large project like a game where it can feel like after two weeks of effort, you have nothing to show for it.
+
+20.
+
+Play the long game.
+
+This is by far the thing I have to remind myself of the most because I love programming.
+
+I love building stuff and I want to do this for a while, but I often fall into that trap of wanting to build a new project super fast and ship it out in a day use ai blah blah blah but i think that where your skills really develop is where you take it slow you really try to understand the tech you're working with so that in the future you get those dividends and then you're able to ship stuff really fast and actually understand what's going on so those were 20 things i wish i knew when i first started programming if you found this video helpful you'll want to watch this one next where i talk about how i tricked my brain to be addicted to coding.
