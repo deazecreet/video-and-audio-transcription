@@ -62,10 +62,7 @@ models/
 #!models/README.md
 
 # Datasets & artefak eksperimen
-data/tmp*/
-data/**/tmp*/
-data/**/temp*/
-data/**/*.cache/
+data/
 *.ckpt
 *.safetensors
 *.bin
