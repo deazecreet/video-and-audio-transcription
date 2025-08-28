@@ -27,6 +27,7 @@ class WhisperTranscriber:
             use_safetensors=True,
             local_files_only=True,
         ).to(device_str)
+        self.model.eval()
 
         self.processor = AutoProcessor.from_pretrained(
             model_local_dir,
@@ -53,11 +54,12 @@ class WhisperTranscriber:
     def transcribe(self, file_path: str, language: str | None = None) -> Dict[str, Any]:
         lang = (language or self.default_lang).lower()
 
-        result = self.pipe(
-            file_path,
-            return_timestamps=True,
-            generate_kwargs={"language": lang, "task": "transcribe"},
-        )
+        with torch.inference_mode():
+            result = self.pipe(
+                file_path,
+                return_timestamps=True,
+                generate_kwargs={"language": lang, "task": "transcribe"},
+            )
 
         chunks: List[dict] = result.get("chunks") or []
         text = " ".join([c.get("text", "").strip() for c in chunks]).strip() or result.get("text", "")
