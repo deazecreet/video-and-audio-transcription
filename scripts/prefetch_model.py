@@ -1,7 +1,7 @@
 import os
 from huggingface_hub import snapshot_download
 
-MODEL_ID  = os.getenv("MODEL_ID", "openai/whisper-large-v3-turbo")
+MODEL_ID = os.getenv("MODEL_ID", "openai/whisper-large-v3-turbo")
 LOCAL_DIR = os.getenv("MODEL_LOCAL_DIR", "./models/whisper-large-v3-turbo")
 
 os.makedirs(LOCAL_DIR, exist_ok=True)
@@ -13,4 +13,4 @@ snapshot_download(
     revision="main",
 )
 
-print(f"✅ Model stored at: {LOCAL_DIR}")
+print(f"Model stored at: {LOCAL_DIR}")

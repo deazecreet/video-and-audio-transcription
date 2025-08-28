@@ -26,23 +26,26 @@ def fetch_audio_mp3(youtube_url: str, out_dir: str, cookies_path: str | None = N
     if cookies_path and os.path.isfile(cookies_path):
         ydl_common["cookiefile"] = cookies_path
 
-    # Ambil judul aman (tanpa unduh)
+    # Ambil metadata dasar (tanpa unduh) untuk penamaan stabil
     with YoutubeDL({**ydl_common, "skip_download": True}) as ydl:
         info = ydl.extract_info(youtube_url, download=False)
         raw_title = info.get("title", "audio")
+        video_id = (info.get("id") or "").strip()
         safe_title = _sanitize(raw_title)
+        id_safe = re.sub(r"[^\w-]", "", video_id)
+        base_name = f"{safe_title}-{id_safe}" if id_safe else safe_title
 
-    final_path = os.path.join(out_dir, f"{safe_title}.mp3")
+    final_path = os.path.join(out_dir, f"{base_name}.mp3")
     if os.path.isfile(final_path):
         logger.info("Audio sudah ada | file=%s (skip download)", final_path)
-        return final_path, safe_title
+        return final_path, base_name
 
     # Opsi unduh dengan fallback agresif ke m4a
     ydl_opts = {
         **ydl_common,
         # Urutan preferensi: m4a -> bestaudio -> best
         "format": "bestaudio[ext=m4a]/bestaudio/best",
-        "outtmpl": os.path.join(out_dir, f"{safe_title}.%(ext)s"),
+        "outtmpl": os.path.join(out_dir, f"{base_name}.%(ext)s"),
         "postprocessors": [{
             "key": "FFmpegExtractAudio",
             "preferredcodec": "mp3",
@@ -56,4 +59,4 @@ def fetch_audio_mp3(youtube_url: str, out_dir: str, cookies_path: str | None = N
         raise FileNotFoundError("Audio file not found after yt-dlp process.")
 
     logger.info("Audio baru diunduh | file=%s", final_path)
-    return final_path, safe_title
+    return final_path, base_name

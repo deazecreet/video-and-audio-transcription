@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Dict
 
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form
+from starlette.concurrency import run_in_threadpool
+from functools import partial
 from pydantic import BaseModel, Field, HttpUrl
 
 from app.api.deps import get_transcriber, rate_limit
@@ -53,10 +55,11 @@ async def transcribe_youtube(
 
     # 1) Unduh/ambil audio (skip bila mp3 sudah ada)
     try:
-        audio_path, base = fetch_audio_mp3(
-            youtube_url=str(req.youtube_url),
-            out_dir=settings.data_tmp_dir,
-            cookies_path=settings.yt_cookies_path
+        audio_path, base = await run_in_threadpool(
+            fetch_audio_mp3,
+            str(req.youtube_url),
+            settings.data_tmp_dir,
+            settings.yt_cookies_path,
         )
         size = os.path.getsize(audio_path)
         logger.info("Audio siap | file=%s size=%s", audio_path, _human(size))
@@ -67,7 +70,7 @@ async def transcribe_youtube(
     # 2) Transkripsi
     try:
         logger.info("Mulai transkripsi...")
-        result = transcriber.transcribe(audio_path, language=req.language)
+        result = await run_in_threadpool(transcriber.transcribe, audio_path, req.language)
         logger.info("Transkripsi selesai | lang=%s len_text=%d", result.get("language"), len(result.get("text") or ""))
     except Exception as e:
         logger.exception("Gagal transkripsi")
@@ -149,7 +152,8 @@ async def transcribe_file(
         import subprocess
         cmd = ["ffmpeg", "-y", "-i", str(tmp_in), "-vn", "-acodec", "libmp3lame", "-ar", "44100", "-ab", "192k", str(tmp_mp3)]
         try:
-            subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            run_cmd = partial(subprocess.run, cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            await run_in_threadpool(run_cmd)
             tmp_for_asr = tmp_mp3
             logger.info("Dikonversi ke MP3 | src=%s -> dst=%s", tmp_in, tmp_mp3)
         except subprocess.CalledProcessError as e:
@@ -159,7 +163,7 @@ async def transcribe_file(
     # Transkripsi
     try:
         logger.info("Mulai transkripsi (file)...")
-        result = transcriber.transcribe(str(tmp_for_asr), language=language)
+        result = await run_in_threadpool(transcriber.transcribe, str(tmp_for_asr), language)
         logger.info("Transkripsi selesai | lang=%s len_text=%d", result.get("language"), len(result.get("text") or ""))
     except Exception as e:
         logger.exception("Gagal transkripsi file")
