@@ -95,20 +95,5 @@ desktop.ini
 .idea/
 *.code-workspace
 
-# =========================
-# Node / Frontend (kalau ada UI)
-# =========================
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnp.*
-.pnpm-debug.log*
-dist/
-.next/
-out/
-
-# =========================
-# Docker & Compose artefak
-# =========================
-# (image/layer cache tidak disimpan di repo)
+# Repomix
+repomix-output.xml
