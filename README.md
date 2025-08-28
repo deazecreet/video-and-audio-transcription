@@ -1,30 +1,30 @@
-# 🎙️ Video & Audio Transcription API
+# Video & Audio Transcription API
 
-This is a **FastAPI service** for transcribing **YouTube videos** or **audio files** using **Whisper (Hugging Face Transformers)**.
+This is a FastAPI service for transcribing YouTube videos or audio files using Whisper (Hugging Face Transformers).
 
 It supports input:
 
-* 🎥 **YouTube URL** → audio is downloaded with `yt-dlp`
-* 🎵 **Audio file** (`.mp3`, `.m4a`, `.aac`, `.wav`)
+- YouTube URL — audio is downloaded with `yt-dlp`
+- Audio file (`.mp3`, `.m4a`, `.aac`, `.wav`)
 
 It creates output:
 
-* **JSON** → language, full text, segments, file paths
-* **TXT** → plain text transcript
+- JSON — language, full text, segments, file paths
+- TXT — plain text transcript
 
 ---
 
-## ✨ Features
+## Features
 
-* REST API built with FastAPI
-* Can work **offline** (download model once, then run without internet)
-* Save outputs in `data/transcripts/`
-* Concurrency limit for safe memory use
-* Logging to console and file
+- REST API built with FastAPI
+- Can work offline (download model once, then run without internet)
+- Saves outputs in `data/transcripts/`
+- Concurrency limit for safe memory use
+- Logging to console and file
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 app/
@@ -43,23 +43,23 @@ requirements.txt
 
 ---
 
-## ✅ Requirements
+## Requirements
 
-* **Python 3.10+**
-* **ffmpeg** installed
+- Python 3.10+
+- ffmpeg installed
 
 ### Install ffmpeg
 
-* **Ubuntu/Debian**
+- Ubuntu/Debian
 
   ```bash
   sudo apt update && sudo apt install -y ffmpeg
   ```
-* **Windows**: download from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html) and add `bin` to PATH.
+- Windows: download from https://ffmpeg.org/download.html and add `bin` to PATH.
 
 ---
 
-## 🚀 Setup
+## Setup
 
 ### 1) Clone repo
 
@@ -80,38 +80,46 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3) Config `.env`
+### 3) Environment Variables
 
-Copy from example:
+Copy from example and edit:
 
 ```bash
 cp .env.example .env
 ```
 
-Edit important values:
+Example `.env`:
 
 ```ini
+# Model
 MODEL_ID=openai/whisper-large-v3-turbo
 MODEL_LOCAL_DIR=./models/whisper-large-v3-turbo
 HF_HOME=./.hf_cache
-TRANSFORMERS_OFFLINE=0   # set 1 to force offline
+TRANSFORMERS_OFFLINE=0  # set 1 to force offline
 DEFAULT_LANG=id
-MAX_CONCURRENCY=2
+
+# I/O
 DATA_TMP_DIR=./data/tmp_audio
 DATA_OUT_DIR=./data/transcripts
+
+# Concurrency
+MAX_CONCURRENCY=2       # number of parallel jobs per process
+
+# YouTube (optional)
+YT_COOKIES_PATH=
 ```
 
 ---
 
-## 🧰 Offline Mode (optional)
+## Offline Mode (optional)
 
-1. Download model:
+1) Download model (prefetch):
 
 ```bash
 python scripts/prefetch_model.py
 ```
 
-2. Edit `.env`:
+2) Enable offline mode in `.env`:
 
 ```
 TRANSFORMERS_OFFLINE=1
@@ -119,44 +127,34 @@ MODEL_LOCAL_DIR=./models/whisper-large-v3-turbo
 HF_HOME=./.hf_cache
 ```
 
-3. Run server.
-
-> Note: `models/` folder is ignored in git.
-
 ---
 
-## ▶️ Run Server
+## Run Server
 
 ```bash
 uvicorn app.main:app --reload
 # Open: http://127.0.0.1:8000
 ```
 
-Check health:
+Health check:
 
 ```bash
 curl http://127.0.0.1:8000/
 ```
 
-Response:
-
-```json
-{"app": "YouTube Transcriber", "status": "ok"}
-```
-
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
-### 1) `POST /transcribe` — YouTube
+### 1) POST /transcribe — YouTube
 
-**Body (JSON):**
+Body (JSON):
 
 ```json
-{ "youtube_url": "https://www.youtube.com/watch?v=...", "language": "id" }
+{ "youtube_url": "https://www.youtube.com/watch?v=VIDEO_ID", "language": "id" }
 ```
 
-**Example cURL:**
+Example:
 
 ```bash
 curl -X POST http://127.0.0.1:8000/transcribe \
@@ -164,31 +162,29 @@ curl -X POST http://127.0.0.1:8000/transcribe \
   -d '{"youtube_url": "https://www.youtube.com/watch?v=VIDEO_ID", "language": "id"}'
 ```
 
-**Response:**
+Response:
 
 ```json
 {
   "ok": true,
-  "title": "Video_Title",
+  "title": "Video_Title-VIDEO_ID",
   "language": "id",
   "text_preview": "...",
   "paths": {
-    "json": "data/transcripts/Video_Title.json",
-    "txt": "data/transcripts/Video_Title.txt"
+    "json": "data/transcripts/Video_Title-VIDEO_ID.json",
+    "txt": "data/transcripts/Video_Title-VIDEO_ID.txt"
   }
 }
 ```
 
----
+### 2) POST /transcribe/file — Upload file
 
-### 2) `POST /transcribe/file` — Upload file
+Form-Data:
 
-**Form-Data:**
+- file: audio file
+- language: optional
 
-* `file`: audio file
-* `language`: (optional)
-
-**Example cURL:**
+Example:
 
 ```bash
 curl -X POST http://127.0.0.1:8000/transcribe/file \
@@ -198,16 +194,29 @@ curl -X POST http://127.0.0.1:8000/transcribe/file \
 
 ---
 
-## 📁 Output
+## Concurrency
 
-* JSON and TXT in `data/transcripts/`
-* Temp audio in `data/tmp_audio/`
+The service runs heavy work (yt-dlp download, ffmpeg convert, Whisper inference) in a threadpool, so the event loop stays responsive. Effective parallelism is controlled by `MAX_CONCURRENCY` (per process). Increase carefully based on your CPU/GPU memory.
+
+To test parallel requests (e.g., in Postman), set `MAX_CONCURRENCY > 1` and send multiple requests simultaneously.
 
 ---
 
-## 🐳 Docker (optional)
+## Output
 
-**Dockerfile**
+- JSON and TXT in `data/transcripts/`
+- Temp audio in `data/tmp_audio/`
+
+For YouTube inputs, output files include the video ID to avoid collisions:
+
+```
+data/transcripts/<sanitized-title>-<VIDEO_ID>.json
+data/transcripts/<sanitized-title>-<VIDEO_ID>.txt
+```
+
+---
+
+## Docker (optional)
 
 ```Dockerfile
 FROM python:3.11-slim
@@ -228,14 +237,13 @@ docker run --rm -p 8000:8000 -v $(pwd)/data:/app/data transcriber
 
 ---
 
-## 🤝 Contribute
+## Notes
 
-Contributions welcome! Open an issue first for big changes.
+- Ensure `ffmpeg` is installed and in PATH (Windows: add `bin` to PATH).
+- For GPU installs, consider installing PyTorch following the official guide for your CUDA version rather than a fixed wheel.
 
 ---
 
-## ❓ FAQ
+## Contribute
 
-* **Model big?** Folder `models/` is not in git. Download with script.
-* **Offline mode?** Yes, download model then set `TRANSFORMERS_OFFLINE=1`.
-* **Languages?** Whisper supports many languages, set via request or `.env`.
+Contributions welcome! Open an issue first for big changes.
